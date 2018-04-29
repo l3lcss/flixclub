@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
       commit('setMovies', movies)
     },
     async fetchMovies ({dispatch}, q) {
-      let movies = await axios.get(`http://www.omdbapi.com/?s=${q}&apikey=409a3997`)
+      let movies = await axios.get(`https://www.omdbapi.com/?s=${q}&apikey=409a3997`)
       dispatch('setMovies', movies.data.Search)
     }
   },
